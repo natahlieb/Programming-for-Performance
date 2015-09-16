@@ -1,0 +1,26 @@
+Program requirements are detailed below:
+
+1)
+Write the 6 varients of matrix-matrix multiply you can generate by interchanging loops. The data-type in
+the matrix should be doubles.
+• Instrument the implementation using PAPI to measure:
+– PAPI LST INS (Total Load Store Instructions)
+– PAPI FP INS (Total Floating Point Instructions)
+– PAPI L1 DCM (Data L1 miss)
+– PAPI L2 TCM (Total L2 miss)
+• Using stampeded at tacc, collect these measurements for each matrix size ranging from 1 to 400. Since
+the values you obtain will depend a lot on the machine you use, you must use stampede for the numbers
+you report. To ensure no interference with other processes, submit your runs to the job scheduler.
+• Plot the miss rates for L1 and L2 for each of the matrix sizes. as well as the total load and store
+instructions and floating point instructions for each matrix size.
+
+2)
+
+Write a very fast matrix multiply. Your code should work for any size square matrix. You may use any of
+the techniques presented in class or from the literature (except, of course, calling an existing library).
+This will be graded on performance. For 3000x3000 using Eigen with vectorization disabled, I see about
+7.5 GFLOPS on stampede. Using ijk I see 205 MFLOPS. Blocking for L1 I get 1.1 GFLOPS. I am taking
+2 ∗ N3/time. The target performance for your code is 3 GFLOPS using this metric. Don’t explicitly
+vectorize your code, vectorization will be a future project. Use gcc (I suggest the flags -ffast-math -O3 -fnotree-vectorize).
+This means a 1000x1000 matrix multiply should take no more than 0.67 sec and a 3000x3000
+18 seconds.

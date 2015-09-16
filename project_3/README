@@ -1,0 +1,44 @@
+NEED TO DO:
+Strange PQ threading- work stealing
+
+Time various thread counts on massive file
+
+COMPLETED
+-------------
+LIFO
+FIFO
+PQ
+Timing FIFO
+FIFO Threading
+Timing functions in LIFO
+Timing functions in FIFO
+LIFO Threading
+PQ Threading
+
+CS378 Programming for Performance Fall 2014- Project 3
+---------------------------------------------
+Justin Hust 
+
+Natahlie Beavers 
+natahliebeavers@gmail.com
+nmb642
+
+
+Description of Files:
+----------------------
+CSRGraph.* : files used to help create the CSR graph of our incoming data
+Util.* : holds various utility functions
+Main.cpp: holds all scheduling implementations 
+compile.sh: compile script
+
+How to Run Various Dijkstra Scheduling Implementations:
+-------------------------------------------------------
+Code is compiled using the compile.sh script; invoke as you would a normal
+executable file.
+
+In Main.cpp, one can adjust what graph should be used to run the various
+Dijkstra implementations on. The adjustment should be made in the main 
+function towards the end of the file. Simply give it the file name. 
+
+The executable created by the compile.sh script is named "proj3". Invoke
+this executable to run all dijkstra sssp scheduling implementations.

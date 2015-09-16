@@ -1,0 +1,33 @@
+The main issue which makes vectorization difficult is actually
+setting up the vectors and breaking down problems into a way
+so that they are able to be vectorized. 
+
+When using vectorization, you must keep in mind things such as 
+memory alignment, something not necessarily worried about at
+other times.
+
+Disassembling a program so that computations can be performed 
+on multiple parts of it at a time can also be difficult. Any
+dependencies must be identified, and could potentially prevent
+a problem from being able to be vectorized. You must be very 
+concious of how you possible unroll loops, so that you are not
+accessing or modifying the information at a certain point in a 
+vector in a way that is undesirable for the problem.
+
+Approach to vectorization:
+I chose to break up the problem into as small of parts as possible
+and so that each section had as little dependency on another
+problem as possible. The most difficult thing for me was figuring 
+out how to ensure proper data alignment. Once the problem was 
+broken up, it became clear what parts of it could be vectorized, 
+and what parts might take more instructions to perform. Paying 
+attention to how my loop would iterate over data as cycles 
+progressed was also critical; I needed to be very aware of the 
+size of any and all of my variables, as well as the size of the 
+vectors that they were stored within.
+
+
+Using vectorized code for part 2, I was able to achieve performance
+of operations on 1600 floating point numbers in less than one 
+microsecond (as measured by gettimeofday). There were then at least 
+27 floating point operations performed per second.

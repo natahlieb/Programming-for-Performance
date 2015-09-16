@@ -1,0 +1,4 @@
+#/!bin/bash
+set -x
+
+g++ -g -I$TACC_PAPI_INC  -Wl,-rpath,$TACC_PAPI_LIB -L$TACC_PAPI_LIB -lm -lpapi part1.cpp -o part1

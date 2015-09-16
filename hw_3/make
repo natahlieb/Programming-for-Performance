@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+#part 1 compile
+gcc -std=c99 -O3 -march=native -o part1.exe part1.c 
+#part 2 compile
+gcc -std=c99 -O3 -march=native -o part2.exe part2.c 
+
+#gcc -std=c99 -o0 -I$TACC_PAPI_INC -o foo -Wl,-rpath,$TACC_PAPI_LIB -L$TACC_PAPI_LIB -lm -lpapi matrix_multiply.c

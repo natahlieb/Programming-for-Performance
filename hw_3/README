@@ -1,0 +1,14 @@
+natahliebeavers@gmail.com
+nmb642
+code should be compiled using ./make
+
+In each c file, there are sections to uncomment
+code so that either scalar or vector approaches are
+taken to each respective problem. Also included are two
+lines which will print out the respective arrays before
+and after the desigated operations on them were performed.
+
+Seg faults are occuring on problem 1 when a vectorized 
+approach was taken. This seems to be some sort of an error
+in vectors being added or stored; a solution was not found. 
+Data alignment was checked and confirmed. 
